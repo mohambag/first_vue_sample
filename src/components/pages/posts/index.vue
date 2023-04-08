@@ -1,6 +1,9 @@
 <template>
   <div>users</div>
   <div class="card-group">
+    <div>
+      <router-link :to="{name:'createPost'}">Create Post</router-link>
+    </div>
     <div v-for="post in posts" :key="post.id" style="float: right;margin-right: 5px">
       <div class="card" style="width: 18rem;">
         <h1 class="card-header">

@@ -5,6 +5,8 @@ import UsersPage from "@/components/pages/users/index.vue";
 import ShowUser from "@/components/pages/users/ShowUser.vue";
 import ShowPost from "@/components/pages/posts/ShowPost.vue";
 import templatePost from "@/components/pages/posts/templatePost.vue";
+import CreatePost from "@/components/pages/posts/CreatePost.vue";
+import UpdatePost from "@/components/pages/posts/EditPost.vue"
 
 const routes = [
     {path: '/', name: 'home', component: HomePage},
@@ -13,8 +15,10 @@ const routes = [
 
     {
         path: '/posts', name: 'posts', component: templatePost, children: [
-            {path:'',name:'postIndex',component: PostsPage},
-            {path: '/:id', name: 'postin', component: ShowPost}
+            {path: '', name: 'postIndex', component: PostsPage},
+            {path: '/:id', name: 'postin', component: ShowPost},
+            {path:'/create',name:'createPost',component: CreatePost},
+            {path:'/update/:id',name:'updatePost',component: UpdatePost}
         ]
     },
 
